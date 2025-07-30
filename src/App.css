@@ -1,0 +1,35 @@
+/* Base styles */
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3D Flip Utilities */
+.flip-card {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .flip-card {
+    scroll-snap-align: center;
+  }
+  
+  .cards-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+}
